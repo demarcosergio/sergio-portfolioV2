@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { LanguageContext } from "@/contexts/LanguageContext";
+import { translations } from "@/data/translations";
+
 export default function About() {
+    const { lang } = useContext(LanguageContext);
     return (
         <main className="min-h-screen bg-white p-6 pt-8 sm:pt-24">
             <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl font-bold text-gray-900 mb-8">Acerca de mí</h1>
+                <h1 className="text-4xl font-bold text-gray-900 mb-8">{translations[lang].about.title}</h1>
                 <div className="space-y-6 text-lg text-gray-700">
                     <section>
                         <h2 className="text-2xl font-bold text-gray-800">Información Personal</h2>

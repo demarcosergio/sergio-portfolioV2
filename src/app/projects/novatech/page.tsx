@@ -1,8 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useContext } from "react";
+import { LanguageContext } from "@/contexts/LanguageContext";
+import { translations } from "@/data/translations";
 
 export default function NovatechPage() {
+    const { lang } = useContext(LanguageContext);
     const fadeInUp = {
         hidden: { opacity: 0, y: 40 },
         visible: { opacity: 1, y: 0 },
@@ -11,7 +15,7 @@ export default function NovatechPage() {
     return (
         <main className="min-h-screen bg-white px-6 py-20">
             <div className="max-w-5xl mx-auto space-y-12">
-                <Link href="/" className="text-indigo-600 hover:underline">&larr; Volver al inicio</Link>
+                <Link href="/" className="text-indigo-600 hover:underline">&larr; {translations[lang].novatech.back}</Link>
 
                 <motion.h1
                     className="text-4xl font-bold text-[#171717]"
@@ -20,7 +24,7 @@ export default function NovatechPage() {
                     variants={fadeInUp}
                     transition={{ duration: 0.8 }}
                 >
-                    Novatech – Proyecto para Milwaukee Tools
+                    {translations[lang].novatech.title}
                 </motion.h1>
 
                 <motion.p
