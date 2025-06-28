@@ -1,17 +1,20 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LanguageContext } from "@/contexts/LanguageContext";
+import { translations } from "@/data/translations";
 
 const MobileNavbar = () => {
     const pathname = usePathname();
     const containerRef = useRef<HTMLDivElement>(null);
+    const { lang, setLang } = useContext(LanguageContext);
 
     const navItems = [
-        { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
-        { name: "Work", href: "/work" },
-        { name: "Contact", href: "/contact" },
+        { name: translations[lang].nav.home, href: "/" },
+        { name: translations[lang].nav.about, href: "/about" },
+        { name: translations[lang].nav.work, href: "/work" },
+        { name: translations[lang].nav.contact, href: "/contact" },
     ];
 
     // Efecto para centrar el elemento activo con transición suave
@@ -53,6 +56,7 @@ const MobileNavbar = () => {
                 })}
                 {/* Espaciador derecho para completar el scroll */}
                 <div className="flex-shrink-0" style={{ width: "50vw" }} />
+                <button onClick={() => setLang(lang === "en" ? "es" : "en")} className="ml-3 px-2 text-sm text-gray-700">{lang === "en" ? "ES" : "EN"}</button>
             </div>
         </nav>
     );

@@ -1,15 +1,19 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
 import MobileNavbar from "./MobileNavbar";
+import { LanguageContext } from "@/contexts/LanguageContext";
+import { translations } from "@/data/translations";
 
 const DesktopNavbar = () => {
     const pathname = usePathname();
+    const { lang, setLang } = useContext(LanguageContext);
     const navItems = [
-        { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
-        { name: "Work", href: "/work" },
-        { name: "Contact", href: "/contact" },
+        { name: translations[lang].nav.home, href: "/" },
+        { name: translations[lang].nav.about, href: "/about" },
+        { name: translations[lang].nav.work, href: "/work" },
+        { name: translations[lang].nav.contact, href: "/contact" },
     ];
 
     return (
@@ -25,6 +29,9 @@ const DesktopNavbar = () => {
                         {name}
                     </Link>
                 ))}
+                <button onClick={() => setLang(lang === "en" ? "es" : "en")} className="ml-2 px-2 text-sm text-gray-700 hover:text-black">
+                    {lang === "en" ? "ES" : "EN"}
+                </button>
             </div>
         </nav>
     );
