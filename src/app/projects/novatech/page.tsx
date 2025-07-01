@@ -13,12 +13,12 @@ export default function NovatechPage() {
     };
 
     return (
-        <main className="min-h-screen bg-white px-6 py-20">
+        <main className="min-h-screen px-6 py-20">
             <div className="max-w-5xl mx-auto space-y-12">
                 <Link href="/" className="text-indigo-600 hover:underline">&larr; {translations[lang].novatech.back}</Link>
 
                 <motion.h1
-                    className="text-4xl font-bold text-[#171717]"
+                    className="text-4xl font-bold text-neutral-100"
                     initial="hidden"
                     animate="visible"
                     variants={fadeInUp}
@@ -28,7 +28,7 @@ export default function NovatechPage() {
                 </motion.h1>
 
                 <motion.p
-                    className="text-lg text-gray-700"
+                    className="text-lg text-neutral-300"
                     initial="hidden"
                     animate="visible"
                     variants={fadeInUp}
@@ -38,14 +38,14 @@ export default function NovatechPage() {
                 </motion.p>
 
                 <motion.div
-                    className="bg-[#f7f7f9] rounded-lg shadow-md p-6"
+                    className="bg-gray-800 rounded-lg shadow-md p-6"
                     initial="hidden"
                     animate="visible"
                     variants={fadeInUp}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                    <h2 className="text-xl font-semibold text-[#171717] mb-2">Tecnologías clave</h2>
-                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                    <h2 className="text-xl font-semibold text-neutral-100 mb-2">Tecnologías clave</h2>
+                    <ul className="list-disc list-inside text-neutral-300 space-y-1">
                         <li>.NET & .NET Core</li>
                         <li>Next.js + TypeScript</li>
                         <li>Azure (App Services, Functions, CI/CD)</li>
@@ -54,7 +54,7 @@ export default function NovatechPage() {
                 </motion.div>
 
                 <motion.div
-                    className="text-sm text-gray-500"
+                    className="text-sm text-gray-400"
                     initial="hidden"
                     animate="visible"
                     variants={fadeInUp}

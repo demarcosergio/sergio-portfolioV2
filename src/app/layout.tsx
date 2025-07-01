@@ -18,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="font-sans bg-white antialiased">
+      <body className="font-sans bg-neutral-900 text-neutral-200 antialiased">
         <LanguageProvider>
           <Navbar />
-          {children}
+          <div className="pt-20">{children}</div>
         </LanguageProvider>
       </body>
     </html>
