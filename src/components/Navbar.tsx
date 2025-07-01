@@ -21,13 +21,17 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 ${theme === "light" ? "bg-[#4570B5]" : "bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950/90 backdrop-blur"}`}
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md ${
+        theme === "light"
+          ? "bg-white/80 border-b border-gray-200"
+          : "bg-gray-900/80 border-b border-gray-700"
+      }`}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        <Link href="/" className="font-bold text-lg text-white">
-          Sergio
+        <Link href="/" className="font-bold text-lg text-gray-900 dark:text-white">
+          Sergio Demarco
         </Link>
-        <nav className="hidden sm:flex gap-6">
+        <nav className="hidden sm:flex gap-6 flex-1 justify-center">
           {navItems.map(({ name, href }) => (
             <Link
               key={name}
