@@ -20,7 +20,21 @@ export default function Contact() {
                         </a>
                     </p>
                     <p>
-                        <span className="font-semibold">Teléfono:</span> (+54) 91161491049
+                        <span className="font-semibold">Teléfono:</span> (+54) 9 116-149-1049
+                    </p>
+                    <p>
+                        <span className="font-semibold">Fecha de nacimiento:</span> 10/01/1994
+                    </p>
+                    <p>
+                        <span className="font-semibold">LinkedIn:</span>{" "}
+                        <a
+                            href="https://linkedin.com/in/sergio-demarco/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                        >
+                            linkedin.com/in/sergio-demarco/
+                        </a>
                     </p>
                     <p>
                         <span className="font-semibold">Dirección:</span> Buenos Aires, Argentina, CP 1704
