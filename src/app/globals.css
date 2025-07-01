@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+html.light {
+  --background: #ffffff;
+  --foreground: #000000;
+  --primary: #4570B5;
+}
+html.dark {
   --background: #111111;
   --foreground: #e5e5e5;
+  --primary: #4570B5;
 }
 
 body {

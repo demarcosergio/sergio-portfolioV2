@@ -15,14 +15,14 @@ export default function ExperienceCard({ experience }: Props) {
     return (
         <motion.div
             layout
-            className="bg-gray-800 rounded-xl shadow-lg p-6 cursor-pointer"
+            className="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg p-6 cursor-pointer"
             onClick={toggle}
         >
             <div className="flex items-start justify-between">
                 <div>
-                    <h3 className="text-xl font-semibold text-white">{experience.title}</h3>
-                    <p className="text-sm text-gray-400 mt-1">{experience.company}</p>
-                    <p className="text-sm mt-2 text-gray-300">{experience.period}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{experience.title}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{experience.company}</p>
+                    <p className="text-sm mt-2 text-gray-700 dark:text-gray-300">{experience.period}</p>
                 </div>
                 <ChevronDown className={`mt-1 transition-transform ${open ? "rotate-180" : "rotate-0"}`} />
             </div>
@@ -33,7 +33,7 @@ export default function ExperienceCard({ experience }: Props) {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="mt-4 list-disc list-inside text-sm text-gray-300 space-y-1"
+                        className="mt-4 list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1"
                     >
                         {experience.responsibilities.map((item, index) => (
                             <li key={index}>{item}</li>
