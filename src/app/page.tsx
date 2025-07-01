@@ -8,7 +8,7 @@ import { translations } from "@/data/translations";
 export default function HomePage() {
   const { lang } = useContext(LanguageContext);
   return (
-    <div className="min-h-screen bg-[#171717] text-white py-20 px-4">
+    <div className="min-h-screen py-20 px-4">
       <h1 className="text-4xl font-bold text-center mb-12">
         {translations[lang].home.title}
       </h1>

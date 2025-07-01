@@ -6,10 +6,10 @@ import { translations } from "@/data/translations";
 export default function Contact() {
     const { lang } = useContext(LanguageContext);
     return (
-        <main className="min-h-screen bg-white p-6 pt-8 sm:pt-24">
+        <main className="min-h-screen p-6 pt-8 sm:pt-24">
             <div className="max-w-3xl mx-auto">
-                <h1 className="text-4xl font-bold text-gray-900 mb-8">{translations[lang].contact.title}</h1>
-                <div className="space-y-4 text-lg text-gray-700">
+                <h1 className="text-4xl font-bold text-neutral-100 mb-8">{translations[lang].contact.title}</h1>
+                <div className="space-y-4 text-lg text-neutral-300">
                     <p>
                         <span className="font-semibold">Email:</span>{" "}
                         <a
